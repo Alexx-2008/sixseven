@@ -15,4 +15,4 @@ class Vehiculo{
     virtual int cobrar() const;
 };
 
-ostream &operator << (ostream &os, &unVehiculo);
+ostream &operator << (ostream &os,Vehiculo &unVehiculo);

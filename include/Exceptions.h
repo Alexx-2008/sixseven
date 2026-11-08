@@ -4,10 +4,12 @@
 
 using namespace std;
 
-class PlacaInvalidaException : public exception (
+class PlacaInvalidaException : public exception {
    private:
    string mensaje;
    public:
    PlacaInvalidaException(string mensaje);
-   const char * what() const noexcept override;
-)
+   const char * what() const noexcept override{
+      return mensaje.c_str();
+   }
+};

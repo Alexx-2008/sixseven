@@ -1,5 +1,7 @@
-#pragma once 
+#pragma once
 #include "Vehiculo.h"
+
+using namespace std;
 
 class Carro : public Vehiculo{
  private:
