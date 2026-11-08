@@ -2,10 +2,6 @@
 #include "Vehiculo.h"
 
 class Carro : public Vehiculo{
- /*ouyea sousou chakarron 
- chakarn
- chakarron chakarron
- wauwauwauwauwauwauwauwauwron*/   
  private:
  int pasajeros;
  public:
