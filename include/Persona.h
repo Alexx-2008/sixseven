@@ -5,7 +5,7 @@
 using namespace std;
 
 class Persona{
-    private:
+    protected:
     string nombre;
     string documento;
     string descripcion;

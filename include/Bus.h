@@ -13,4 +13,4 @@ class Bus: public Vehiculo{
     int getPuestos() const;
     string info() const override;
     int cobrar() const override;
-}
+};
