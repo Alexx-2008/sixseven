@@ -15,5 +15,5 @@ class Persona{
     virtual string getDescripcion() const;
     void setNombre(string nombre);
     void setDocumento(string documento);     
-    virtual string hacerDescripcion(string descripcion);
+    virtual string hacerDescripcion(string descripcion) const;
 };

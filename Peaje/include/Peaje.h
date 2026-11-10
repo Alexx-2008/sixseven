@@ -2,7 +2,8 @@
 #include <string>
 #include <vector>
 #include "Operador.h"
+#include "Registro.h"
 
-class Caseta {
+class Peajes {
 
 };
