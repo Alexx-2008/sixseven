@@ -13,3 +13,4 @@ class PlacaInvalidaException : public exception {
       return mensaje.c_str();
    }
 };
+//Placa inválida, datos inválidos y descuadre de caja

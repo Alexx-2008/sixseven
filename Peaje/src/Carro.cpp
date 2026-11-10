@@ -1,0 +1,32 @@
+#include "Carro.h"
+#include "Variante.h"
+#include "Propietario.h"
+
+Carro::Carro(string placa, int pasajeros) : Vehiculo(placa), pasajeros(pasajeros){} //Pendiente excepción
+//Pendiente para excepciónxd
+void Carro::setPasajeros(int pasajeros){this->pasajeros = pasajeros;}
+int Carro::getPasajeros()const{return pasajeros;}
+Carro::~Carro() {cout << "Destruyendo carro: " << placa << endl;}
+string Carro::info()const{return getTipo() + "| placa: " + placa;}
+int Carro::cobrar()const{
+    int tarifaBase = 10000 + (200 * unidad);
+
+do
+    if (propietario != nullptr){
+        if (propietario->getDescuento()) {
+        int descuento = 30 + centena;
+        return tarifaBase * (100 - descuento) / 100;
+     };
+    }
+    while (propietario==nullptr);
+return tarifaBase;}
+
+ostream &operator << (ostream &os, Vehiculo &vehiculo) {
+    os << vehiculo.info() << endl;
+    return os;
+}
+
+
+string Carro::info() const {
+    return Vehiculo::info() + " | Pasajeros: " + to_string(pasajeros);
+}
