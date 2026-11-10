@@ -11,8 +11,8 @@ class Moto : public Vehiculo{
  Moto(string placa, int cilindraje);
  Moto(string placa, int cilindraje, Propietario propietario);
  ~Moto();
- void setPasajeros(int cilindraje);
- int getPasajeros() const;
+ void setCilindraje(int cilindraje);
+ int getCilindraje() const;
  string info() const override;
  int cobrar() const override;
 };
