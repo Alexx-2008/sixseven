@@ -8,14 +8,14 @@ class Registro{
     private:
     string placa;
     string categoria;
-    string valor;
+    int valor;
     public:
-    Registro(string placa, string categoria, string valor);
+    Registro(string placa, string categoria, int valor);
     ~Registro();
     string getPlaca() const;   
     string getCategoria() const;
-    string getValor() const;
+    int getValor() const;
     void setPlaca(string placa);
     void setCategoria(string categoria);
-    void setValor(string valor);
+    void setValor(int valor);
 };
