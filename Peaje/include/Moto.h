@@ -7,7 +7,9 @@ class Moto : public Vehiculo{
  private:
  int cilindraje;
  public:
+ Moto();
  Moto(string placa, int cilindraje);
+ Moto(string placa, int cilindraje, Propietario propietario);
  ~Moto();
  void setPasajeros(int cilindraje);
  int getPasajeros() const;

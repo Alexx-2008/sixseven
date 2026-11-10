@@ -7,7 +7,9 @@ class Carro : public Vehiculo{
  private:
  int pasajeros;
  public:
+ Carro();
  Carro(string placa, int pasajeros);
+ Carro(string placa, int pasajeros, Propietario propietario);
  ~Carro();
  void setPasajeros(int pasajeros);
  int getPasajeros() const;
