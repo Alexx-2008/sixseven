@@ -11,7 +11,7 @@
 #include "Registro.h"
 
 int main(){
-    Peajes *peaje;
+    Peaje *peaje;
     /*Vehiculo *vehiculo = new Vehiculo("");*/
     /*Persona *persona = new Persona("","","");*/
     Carro *carro;
