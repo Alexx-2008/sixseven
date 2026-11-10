@@ -7,9 +7,11 @@ class Operador : public Persona{
     private: 
     string codigo;
     public:
+    Operador();
     Operador(string codigo);
+    Operador(string nombre, string documento, string descripcion);
     ~Operador();
     void setCodigo(string codigo) const;
     string getCodigo() const;
-    string hacerDescripcion(string descripcion) const override;
+    void hacerDescripcion(string descripcion) const override;
 };

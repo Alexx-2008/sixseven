@@ -11,5 +11,5 @@ class Propietario : public Persona{
     ~Propietario();
     void setDescuento(bool vecino) const;
     bool getDescuento() const;
-    string hacerDescripcion(string descripcion) const override;
+    void hacerDescripcion(string descripcion) const override;
 };
