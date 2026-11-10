@@ -3,7 +3,6 @@
 #include "Propietario.h"
 
 Moto::Moto(string placa, int cilindraje) : Vehiculo(placa), cilindraje(cilindraje){} //Pendiente excepción
-//Pendiente para excepciónxd
 void Moto::setCilindraje(int cilindraje){this->cilindraje = cilindraje;}
 int Moto::getCilindraje()const{return cilindraje;}
 Moto::~Moto() {cout << "Destruyendo moto: " << placa << endl;}

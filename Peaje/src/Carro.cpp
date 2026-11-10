@@ -3,7 +3,6 @@
 #include "Propietario.h"
 
 Carro::Carro(string placa, int pasajeros) : Vehiculo(placa), pasajeros(pasajeros){} //Pendiente excepción
-//Pendiente para excepciónxd
 void Carro::setPasajeros(int pasajeros){this->pasajeros = pasajeros;}
 int Carro::getPasajeros()const{return pasajeros;}
 Carro::~Carro() {cout << "Destruyendo carro: " << placa << endl;}
