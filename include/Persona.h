@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include <string>
-
 using namespace std;
 
 class Persona{
@@ -16,5 +15,5 @@ class Persona{
     virtual string getDescripcion() const;
     void setNombre(string nombre);
     void setDocumento(string documento);     
-    virtual string hacerDescrpicion() const;
+    virtual string hacerDescripcion(string descripcion);
 };
