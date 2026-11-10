@@ -9,11 +9,12 @@ class Persona{
     string documento;
     string descripcion;
     public:
+    Persona();
     Persona(string nombre, string documento, string descripcion);
     string getNombre() const;
     string getDocumento() const;
     virtual string getDescripcion() const;
     void setNombre(string nombre);
     void setDocumento(string documento);     
-    virtual string hacerDescripcion(string descripcion) const;
+    virtual void hacerDescripcion(string descripcion);
 };
