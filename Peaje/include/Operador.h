@@ -8,7 +8,7 @@ class Operador : public Persona{
     string codigo;
     public:
     Operador();
-    Operador(string codigo);
+    Operador(string codigo, string nombre, string documento, string descripcion);
     Operador(string nombre, string documento, string descripcion);
     ~Operador();
     void setCodigo(string codigo) const;

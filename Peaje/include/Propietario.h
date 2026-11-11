@@ -7,7 +7,9 @@ class Propietario : public Persona{
     private:
     bool vecino;
     public:
-    Propietario(bool vecino);
+    Propietario();
+    Propietario(string nombre, string documento, string descripcion);
+    Propietario(bool vecino, string nombre, string documento, string descripcion);
     ~Propietario();
     void setDescuento(bool vecino) const;
     bool getDescuento() const;
