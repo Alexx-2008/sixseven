@@ -8,17 +8,32 @@ class Peaje {
     private:
     vector<Registro> registros;
     Operador operador;
-    int cantidadVehiculos;
-    double plataRecaudada;
+    int cantidadCarros;
+    int cantidadMotos;
+    int cantidadBuses;
+    int cantidadCamiones;
+    int plataRecaudada;
     public:
+    Peaje();
+    Peaje(int cantidadCarros, int cantidadMotos, int cantidadBuses, int cantidadCamiones, int plataRecaudada, Operador operador, vector<Registro> registros);
     Peaje(Operador operador);
     ~Peaje();
     vector<Registro> getRegistos() const;
-    Operador getOperador() const;
+    Operador*getOperador() ;
+    
     void setRegistros(vector<Registro> registros);
     void setOperador(Operador operador);
-    int getCantidadVehiculos() const;
-    void setCantidadVehiculos(int cantidadVehiculos);
-    double getPlataRecaudada() const;
-    void setPlataRecaudada(double plataRecaudada);
+    int getCantidadCarros() const;
+    void setCantidadCarros(int cantidadCarros);
+    int getCantidadMotos() const;
+    void setCantidadMotos(int cantidadMotos);
+    int getCantidadBuses() const;
+    void setCantidadBuses(int cantidadBuses);
+    int getCantidadCamiones() const;
+    void setCantidadCamiones(int cantidadCamiones);
+    int getPlataRecaudada() const;
+    void setPlataRecaudada(int plataRecaudada);
+
+    void cobrarPeaje(Vehiculo* vehiculo);
+    void hacerRegistro(Registro* registro);
 };
