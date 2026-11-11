@@ -11,7 +11,7 @@ class Carro : public Vehiculo{
  Carro(string placa, int pasajeros);
  Carro(string placa, int pasajeros, Propietario propietario);
  ~Carro();
- void setPasajeros(int pasajeros);
+ void setPasajeros(int);
  int getPasajeros() const;
  string info() const override;
  int cobrar() const override;

@@ -1,7 +1,7 @@
 #include "Vehiculo.h"
 
 
-Vehiculo::Vehiculo(): placa("SIX777"), propietario(nullptr){}
+Vehiculo::Vehiculo(): placa(""), propietario(nullptr){}
 Vehiculo::Vehiculo(string placa){}
 //Pendiente para excepciónxd
 void Vehiculo::setPlaca(string placa){}//Pendiente de excepción

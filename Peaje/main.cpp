@@ -18,9 +18,9 @@ int main(){
     Bus *bus = new Bus("DEF456", 30);
     Camion *camion = new Camion("GHI789", 6);
     Moto *moto = new Moto("JKL012", 2);
-    Propietario *propietario = new Propietario("Carlos", "987654321", "Propietario");
-    Operador *operador = new Operador("María", "123456789", "Operador");
-    Registro *registro;
+    Propietario *propietario = new Propietario(true, "Carlos", "987654321", "Propietario");
+    Operador *operador = new Operador("2","María", "123456789", "Operador");
+    Registro *registro = new Registro("","",0);
     cout<< "cuando yolabi wujujuju"<< endl;
     return 0;
 };

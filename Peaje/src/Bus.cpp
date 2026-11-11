@@ -14,7 +14,6 @@ Bus::Bus(string placa, int puestos) : Vehiculo(placa), puestos(puestos){
 void Bus::setPuestos(int puestos){this->puestos = puestos;}
 int Bus::getPuestos()const{return puestos;}
 Bus::~Bus() {cout << "Destruyendo Bus: " << placa << endl;}
-string Bus::info()const{return getTipo() + "| placa: " + placa;}
 int Bus::cobrar()const{
     int tarifaBase = 14000 + (300 * decena);
 do
@@ -27,11 +26,6 @@ do
     while (propietario==nullptr);
 return tarifaBase;}
 
-ostream &operator << (ostream &os, Vehiculo &vehiculo) {
-    os << vehiculo.info() << endl;
-    return os;
-}
-
-string Bus::info() const {
-    return Vehiculo::info() + " | Pasajeros: " + to_string(puestos);
+string Bus::info() const{
+    return Vehiculo::info() + " | Puestos: " + to_string(puestos); 
 }

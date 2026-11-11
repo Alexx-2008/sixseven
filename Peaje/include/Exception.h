@@ -8,29 +8,15 @@ class PlacaInvalidaException : public exception {
    private:
    string mensaje;
    public:
-   PlacaInvalidaException(string mensaje);
-   const char * what() const noexcept override{
-      return mensaje.c_str();
-   }
+   PlacaInvalidaException(string);
+   const char* what() const noexcept override;
 };
 
 class DatosInvalidosException : public exception {
    private:
    string mensaje;
    public:
-   DatosInvalidosException(string mensaje);
-   const char * what() const noexcept override{
-      return mensaje.c_str();
-   }
+   DatosInvalidosException(string);
+   const char* what() const noexcept override;
 };
-
-class DescuadreCajaException : public exception {
-   private:
-   string mensaje;
-   public:
-   DescuadreCajaException(string mensaje);
-   const char * what() const noexcept override{
-      return mensaje.c_str();
-   }
-};
-//Placa inválida, datos inválidos y descuadre de caja
+//Placa inválida, datos inválidos y (descuadre de caja) El profe dijo q no descuadre

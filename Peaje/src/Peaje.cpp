@@ -1,8 +1,6 @@
 #include "Peaje.h"
-#include "Vehiculo.h"
-#include "Registro.h"
 
-Peaje::Peaje(int cantidadCarros, int cantidadMotos, int cantidadBuses, int cantidadCamiones, int plataRecaudada, Operador operador, vector<Registro> registros): cantidadCarros(cantidadCarros), cantidadMotos(cantidadMotos), cantidadBuses(cantidadBuses), cantidadCamiones(cantidadCamiones), plataRecaudada(plataRecaudada), operador(operador), registros(registros){}
+Peaje::Peaje(int cantidadCarros, int cantidadMotos, int cantidadBuses, int cantidadCamiones, int plataRecaudada, Operador operador, vector<Registro> registros, Vehiculo* vehiculo): cantidadCarros(cantidadCarros), cantidadMotos(cantidadMotos), cantidadBuses(cantidadBuses), cantidadCamiones(cantidadCamiones), plataRecaudada(plataRecaudada), operador(operador), registros(registros){}
 
 //sets
 void Peaje::setRegistros(vector<Registro> registros){this->registros = registros;}
