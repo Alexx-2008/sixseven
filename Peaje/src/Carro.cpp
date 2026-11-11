@@ -1,8 +1,16 @@
 #include "Carro.h"
 #include "Variante.h"
 #include "Propietario.h"
+#include "Exception.h"
 
-Carro::Carro(string placa, int pasajeros) : Vehiculo(placa), pasajeros(pasajeros){} //Pendiente excepción
+Carro::Carro(string placa, int pasajeros) : Vehiculo(placa), pasajeros(pasajeros){
+    if (placa.length() <= 0 || placa.length() > 6) {
+        throw PlacaInvalidaException("La placa debe tener entre 1 y 6 caracteres");
+    }
+    if (pasajeros <= 0) {
+        throw DatosInvalidosException("El número de pasajeros debe ser mayor que cero");
+    }
+} //Pendiente excepción
 void Carro::setPasajeros(int pasajeros){this->pasajeros = pasajeros;}
 int Carro::getPasajeros()const{return pasajeros;}
 Carro::~Carro() {cout << "Destruyendo carro: " << placa << endl;}

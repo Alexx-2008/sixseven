@@ -1,8 +1,16 @@
 #include "Camion.h"
 #include "Variante.h"
 #include "Propietario.h"
+#include "Exception.h"
 
-Camion::Camion(string placa, int ejes) : Vehiculo(placa), ejes(ejes){} //Pendiente excepción
+Camion::Camion(string placa, int ejes) : Vehiculo(placa), ejes(ejes){
+    if (placa.length() <= 0 || placa.length() > 6) {
+        throw PlacaInvalidaException("La placa debe tener entre 1 y 6 caracteres");
+    }
+    if (ejes <= 0) {
+        throw DatosInvalidosException("El número de ejes debe ser mayor que cero");
+    }
+} 
 void Camion::setEjes(int ejes){this->ejes = ejes;}
 int Camion::getEjes()const{return ejes;}
 Camion::~Camion() {cout << "Destruyendo camion: " << placa << endl;}

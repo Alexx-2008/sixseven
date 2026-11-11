@@ -1,8 +1,16 @@
 #include "Bus.h"
 #include "Variante.h"
 #include "Propietario.h"
+#include "Exception.h"
 
-Bus::Bus(string placa, int puestos) : Vehiculo(placa), puestos(puestos){} //Pendiente excepción
+Bus::Bus(string placa, int puestos) : Vehiculo(placa), puestos(puestos){
+ if (placa.length() <= 0 || placa.length() > 6) {
+        throw PlacaInvalidaException("La placa debe tener entre 1 y 6 caracteres");
+    }
+    if (puestos <= 0) {
+        throw DatosInvalidosException("El número de puestos debe ser mayor que cero");
+    }
+} 
 void Bus::setPuestos(int puestos){this->puestos = puestos;}
 int Bus::getPuestos()const{return puestos;}
 Bus::~Bus() {cout << "Destruyendo Bus: " << placa << endl;}
