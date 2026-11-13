@@ -1,5 +1,5 @@
 #include "Vehiculo.h"
-
+#include "Variante.h"
 
 Vehiculo::Vehiculo(): placa(""), propietario(nullptr){}
 Vehiculo::Vehiculo(string placa){}

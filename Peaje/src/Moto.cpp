@@ -24,6 +24,11 @@ do
      };
     }
     while (propietario==nullptr);
+if (propietario!=nullptr && propietario->getDescuento())
+    {
+        int descuento=30+centena;
+        tarifaBase=tarifaBase*descuento/100;   
+}
 return tarifaBase;}
 
 string Moto::info() const {
