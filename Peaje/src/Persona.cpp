@@ -11,4 +11,4 @@ string Persona::getNombre() const{return nombre;}
 string Persona::getDocumento() const{return documento;}
 string Persona::getDescripcion() const{return descripcion;}
 
-Persona::~Persona(){cout<<"Destruyendo: ";}
+Persona::~Persona(){cout<<"Destruyendo Persona de tipo: ";}

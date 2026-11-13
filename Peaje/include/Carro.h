@@ -10,7 +10,7 @@ class Carro : public Vehiculo{
  Carro();
  Carro(string placa, int pasajeros);
  Carro(string placa, int pasajeros, Propietario propietario);
- ~Carro();
+ ~Carro() override;
  void setPasajeros(int);
  int getPasajeros() const;
  void setPropietario(Propietario* propietario);

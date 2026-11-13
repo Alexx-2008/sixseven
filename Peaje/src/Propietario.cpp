@@ -4,4 +4,6 @@ Propietario::Propietario(bool vecino, string nombre, string documento, string de
 void Propietario::setDescuento(bool vecino) const{this->vecino == vecino;}
 bool Propietario::getDescuento() const{return vecino;}
 void Propietario::hacerDescripcion(string descripcion) const{this->descripcion == descripcion;}
-Propietario::~Propietario(){cout<<"Destruyendo: ";}
+
+
+Propietario::~Propietario(){cout<<"Destruyendo Propietario: "<<nombre<<endl;}

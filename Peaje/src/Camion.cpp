@@ -16,7 +16,7 @@ void Camion::setPropietario(Propietario* propietario){this->propietario = propie
 string Camion::getTipo() const {
     return "Camion";
 }
-Camion::~Camion() {cout << "Destruyendo camion: " << placa << endl;}
+Camion::~Camion() {cout << "Destruyendo Camion: " << placa << endl;}
 int Camion::cobrar()const{
     int tarifaBase = 8000 + (100 * decena);
         return tarifaBase * ejes;

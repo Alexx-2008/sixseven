@@ -12,7 +12,7 @@ class Vehiculo{
     Vehiculo ();
     Vehiculo (string placa);
     Vehiculo (string placa, Propietario propietario);
-    ~Vehiculo();
+    virtual ~Vehiculo();
     virtual string getTipo() const;
     Propietario* getPropietario() const;
     void setPropietario(Propietario* propietario);

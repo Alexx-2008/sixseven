@@ -11,7 +11,7 @@ class Persona{
     public:
     Persona();
     Persona(string nombre, string documento, string descripcion);
-    ~Persona();
+    virtual ~Persona();
     string getNombre() const;
     string getDocumento() const;
     virtual string getDescripcion() const;

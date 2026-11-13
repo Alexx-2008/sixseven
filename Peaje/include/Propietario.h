@@ -10,7 +10,7 @@ class Propietario : public Persona{
     Propietario();
     Propietario(string nombre, string documento, string descripcion);
     Propietario(bool vecino, string nombre, string documento, string descripcion);
-    ~Propietario();
+    ~Propietario() override;
     void setDescuento(bool vecino) const;
     bool getDescuento() const;
     void hacerDescripcion(string descripcion) const override;

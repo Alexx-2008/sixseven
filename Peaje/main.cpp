@@ -86,13 +86,12 @@ vector<Vehiculo*> vehiculos;
     cout<<"Caso 13"<<endl;
     delete peaje;
     
-    for (Vehiculo *vehiculo : vehiculos) {
+    for (Vehiculo* vehiculo : vehiculos) {
         delete vehiculo;
     }
-    for (Persona *persona : personas) {
+    for (Persona* persona : personas) {
         delete persona;
     }
-
         return 0;
 };
 

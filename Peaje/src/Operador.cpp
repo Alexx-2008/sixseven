@@ -5,4 +5,4 @@ void Operador::setCodigo(string codigo) const{this->codigo == codigo;}
 void Operador::hacerDescripcion(string descripcion) const{this->descripcion == descripcion;}
 string Operador::getCodigo() const{return codigo;}
 
-Operador::~Operador(){cout<<"Destruyendo: ";}
+Operador::~Operador(){cout<<"Destruyendo Operador: "<<nombre<<endl;}    

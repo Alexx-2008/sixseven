@@ -14,7 +14,7 @@ void Vehiculo::setPropietario(Propietario* propietario){this->propietario = prop
 string Vehiculo::getPlaca()const{return placa;}
 Propietario* Vehiculo::getPropietario()const{return propietario;}
 
-Vehiculo::~Vehiculo(){cout<<"Destruyendo: ";}
+Vehiculo::~Vehiculo(){}
 string Vehiculo::getTipo()const{return "Vehiculo: ";}
 string Vehiculo::info()const{return " placa: " + getPlaca();}
 int Vehiculo::cobrar()const{}

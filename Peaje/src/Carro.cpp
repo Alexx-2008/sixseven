@@ -15,7 +15,7 @@ string Carro::getTipo() const {
     return "Carro";
 }
 void Carro::setPropietario(Propietario* propietario){this->propietario = propietario;}
-Carro::~Carro() {cout << "Destruyendo carro: " << placa << endl;}
+Carro::~Carro() {cout << "Destruyendo Carro: " << placa << endl;}
 int Carro::cobrar()const{
     int tarifaBase = 10000 + (200 * unidad);
     if (propietario != nullptr){

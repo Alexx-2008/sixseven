@@ -10,7 +10,7 @@ class Bus: public Vehiculo{
     Bus();
     Bus(string placa, int puestos);
     Bus(string placa, int puestos, Propietario propietario);
-    ~Bus();
+    ~Bus() override;
     void setPuestos(int puestos);
     int getPuestos() const;
     void setPropietario(Propietario* propietario);

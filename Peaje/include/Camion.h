@@ -10,7 +10,7 @@ class Camion : public Vehiculo{
     Camion();
     Camion(string placa, int ejes);
     Camion(string placa, int ejes, Propietario propietario);
-    ~Camion();
+    ~Camion() override;
     void setEjes(int ejes);
     int getEjes() const;
     void setPropietario(Propietario* propietario);
