@@ -15,5 +15,6 @@ class Camion : public Vehiculo{
     int getEjes() const;
     void setPropietario(Propietario* propietario);
     string info() const override;
+    string getTipo() const override;
     int cobrar() const override;
 };

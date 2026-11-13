@@ -1,4 +1,5 @@
 #include "Peaje.h"
+#include "Registro.h"
 
 Peaje::Peaje(): cantidadCarros(0), cantidadMotos(0), cantidadBuses(0), cantidadCamiones(0), plataRecaudada(0), operador("","", "", ""), vehiculo(nullptr){}
 Peaje::Peaje(int cantidadCarros, int cantidadMotos, int cantidadBuses, int cantidadCamiones, int plataRecaudada, Operador operador, vector<Registro> registros, Vehiculo* vehiculo): cantidadCarros(cantidadCarros), cantidadMotos(cantidadMotos), cantidadBuses(cantidadBuses), cantidadCamiones(cantidadCamiones), plataRecaudada(plataRecaudada), operador(operador), registros(registros){}
@@ -17,11 +18,20 @@ int Peaje::getCantidadCarros()const{return cantidadCarros;}
 int Peaje::getCantidadMotos()const{return cantidadMotos;}
 int Peaje::getCantidadBuses()const{return cantidadBuses;}
 int Peaje::getCantidadCamiones()const{return cantidadCamiones;}
+int Peaje::getPlataRecaudada()const{return plataRecaudada;}
 Operador* Peaje::getOperador(){return &operador;}
-vector<Registro> Peaje::getRegistos()const{return registros;}
-
+vector<Registro> Peaje::getRegistros()const{return registros;}
 void Peaje::hacerRegistro(Registro* registro){
-    string categoria = registro->getCategoria();
+}
+
+
+void Peaje::cobrarPeaje(Vehiculo* vehiculo){
+    int valor = vehiculo->cobrar();    
+    setPlataRecaudada(plataRecaudada + valor);
+    Registro* registro = new Registro(vehiculo->getPlaca(), vehiculo->getTipo(), valor);
+    hacerRegistro(registro);
+    cout<< vehiculo->info() << " Pago: "<<valor<<endl;
+     string categoria = vehiculo->getTipo();
     if(categoria == "Carro"){
         cantidadCarros++;
     }else if(categoria == "Moto"){
@@ -31,15 +41,15 @@ void Peaje::hacerRegistro(Registro* registro){
     }else if(categoria == "Camion"){
         cantidadCamiones++;
     }
-    //se hace con if pq con switch no acepta strings
-}
+    }
 
-void Peaje::cobrarPeaje(Vehiculo* vehiculo){
-    int valor = vehiculo->cobrar();    
-    setPlataRecaudada(valor);
-    Registro* registro = new Registro(vehiculo->getPlaca(), vehiculo->getTipo(), valor);
-    hacerRegistro(registro);
-    cout<< vehiculo->info() << " Pago: "<<valor<<endl;
-}
-
-Peaje::~Peaje(){cout<<"Destruyendo peaje: ";}
+Peaje::~Peaje(){cout<<"Destruyendo peaje: ";
+    // .empty funciona, lo vimos en teoría de POO
+    if (registros.empty()){
+        cout<<"No hay registros para destruir."<<endl;
+    } else {
+        cout<<"Destruyendo registros..."<<endl;
+    }
+for (int i=0; i < registros.size(); i++) {delete &registros[i];}
+        registros.clear();
+    }

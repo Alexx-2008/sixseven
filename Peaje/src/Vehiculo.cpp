@@ -7,16 +7,11 @@ Vehiculo::Vehiculo(string placa){this->placa = placa;}
 void Vehiculo::setPlaca(string placa){
     try{
         if (placa.length() <= 0 || placa.length() > 6) {
-        throw PlacaInvalidaException("La placa debe tener entre 1 y 6 caracteres");}
-    }catch (const exception& e){cout<<"Error: "<<e.what()<<endl;} 
-    this->placa = placa;}
+        throw PlacaInvalidaException("La placa debe tener entre 1 y 6 caracteres");
+        }this->placa = placa;
+    }catch (const exception& e){cout<<"Error: "<<e.what()<<endl;} }
 void Vehiculo::setPropietario(Propietario* propietario){this->propietario = propietario;}
-string Vehiculo::getPlaca()const{
-    try{
-        if (placa.length() <= 0 || placa.length() > 6) {
-        throw PlacaInvalidaException("La placa debe tener entre 1 y 6 caracteres");}
-    }catch (const exception& e){cout<<"Error: "<<e.what()<<endl;}
-    return placa;}
+string Vehiculo::getPlaca()const{return placa;}
 Propietario* Vehiculo::getPropietario()const{return propietario;}
 
 Vehiculo::~Vehiculo(){cout<<"Destruyendo: ";}

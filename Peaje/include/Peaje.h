@@ -19,7 +19,7 @@ class Peaje {
     Peaje(int cantidadCarros, int cantidadMotos, int cantidadBuses, int cantidadCamiones, int plataRecaudada, Operador operador, vector<Registro> registros, Vehiculo* vehiculo);
     Peaje(Operador operador);
     ~Peaje();
-    vector<Registro> getRegistos() const;
+    vector<Registro> getRegistros() const;
     Operador*getOperador() ;
     
     void setRegistros(vector<Registro> registros);

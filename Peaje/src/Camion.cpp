@@ -3,17 +3,19 @@
 #include "Propietario.h"
 #include "Exception.h"
 
-Camion::Camion(string placa, int ejes) : Vehiculo(placa), ejes(ejes){
-try{
+Camion::Camion(string placa, int ejes) : Vehiculo(placa), ejes(ejes){}
+ 
+void Camion::setEjes(int ejes){try{
     if (ejes <= 2) {
-        throw DatosInvalidosException("El número de ejes debe ser mayor que dos");
-    }
+        throw DatosInvalidosException("El numero de ejes debe ser mayor que dos");
+    }this->ejes = ejes;
    }catch (const exception& e){cout<<"Error: "<<e.what()<<endl;}
 }
- 
-void Camion::setEjes(int ejes){this->ejes = ejes;}
 int Camion::getEjes()const{return ejes;}
 void Camion::setPropietario(Propietario* propietario){this->propietario = propietario;}
+string Camion::getTipo() const {
+    return "Camion";
+}
 Camion::~Camion() {cout << "Destruyendo camion: " << placa << endl;}
 int Camion::cobrar()const{
     int tarifaBase = 8000 + (100 * decena);

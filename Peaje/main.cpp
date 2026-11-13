@@ -12,47 +12,88 @@
 
 int main(){
     Peaje *peaje = new Peaje(); 
-
+vector<Persona*> personas;
+vector<Vehiculo*> vehiculos;
     Propietario *vecino = new Propietario(true, "Carlos", "987654321", "Soy vecino");
+    personas.push_back(vecino);
     Propietario *noVecino = new Propietario(false, "Yarbis", "12345678", "No soy vecino");
+    personas.push_back(noVecino);
 
     Carro *carro = new Carro("ABC123", 3);
+    vehiculos.push_back(carro);
     Bus *bus = new Bus("BUS777", 38);
+    vehiculos.push_back(bus);
     Camion *camion = new Camion("CAM301", 3);
+    vehiculos.push_back(camion);
     Moto *moto = new Moto("XYZ45A", 125);
+    vehiculos.push_back(moto);
 
     Operador *operador = new Operador("2","María", "123456789", "Operador");
+    personas.push_back(operador);
     Registro *registro = new Registro("","",0);
-
+    
     cout<<"Caso 1"<<endl;
     carro->setPropietario(noVecino);
     peaje->cobrarPeaje(carro);
+    vehiculos.push_back(carro);
 
     cout<<"Caso 2"<<endl;
     carro->setPropietario(vecino);
     peaje->cobrarPeaje(carro);
+    vehiculos.push_back(carro);
  
     cout<<"Caso 3"<<endl;
     moto->setPropietario(vecino);
     peaje->cobrarPeaje(moto);
+    vehiculos.push_back(moto);
 
     cout<<"Caso 4"<<endl;
     moto->setPlaca("MOT650");
     moto->setCilindraje(650);
     peaje->cobrarPeaje(moto);
+    vehiculos.push_back(moto);
 
     cout<<"Caso 5"<< endl;
+    bus->setPropietario(vecino);
     peaje->cobrarPeaje(bus);
+    vehiculos.push_back(bus);
 
     cout<<"caso 6"<< endl;
     peaje->cobrarPeaje(camion);
+    vehiculos.push_back(camion);
 
     cout<<"caso 7"<< endl;
     camion->setEjes(3+1);
     peaje->cobrarPeaje(camion);
+    vehiculos.push_back(camion);
 
     cout<<"caso 8"<<endl;
-    return 0;
+    carro->setPlaca("");
+    peaje->cobrarPeaje(carro);
+    vehiculos.push_back(carro);
+//Imprime el error y además imprime el carro ya creado, el ABC123 
+
+    cout<<"caso 9"<<endl;
+    camion->setEjes(1);
+    peaje->cobrarPeaje(camion);
+    vehiculos.push_back(camion);
+//Imprime igual, el error y además el camión ya creado el CAM301
+
+    cout<<"caso 10"<<endl;
+    cout<< "Buses:" << peaje->getCantidadBuses() << " Motos:" << peaje->getCantidadMotos() << " Carros:" << peaje->getCantidadCarros() << " Camiones:" << peaje->getCantidadCamiones() << endl;
+    cout<< "Plata recaudada: " << peaje->getPlataRecaudada() << endl;
+
+    cout<<"Caso 13"<<endl;
+    delete peaje;
+    
+    for (Vehiculo *vehiculo : vehiculos) {
+        delete vehiculo;
+    }
+    for (Persona *persona : personas) {
+        delete persona;
+    }
+
+        return 0;
 };
 
 

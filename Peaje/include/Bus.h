@@ -14,6 +14,7 @@ class Bus: public Vehiculo{
     void setPuestos(int puestos);
     int getPuestos() const;
     void setPropietario(Propietario* propietario);
+    string getTipo() const override;
     string info() const override;
     int cobrar() const override;
 };

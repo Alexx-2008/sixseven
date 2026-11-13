@@ -14,6 +14,7 @@ class Moto : public Vehiculo{
  void setCilindraje(int cilindraje);
  int getCilindraje() const;
  void setPropietario(Propietario* propietario);
+ string getTipo() const override;
  string info() const override;
  int cobrar() const override;
 };
