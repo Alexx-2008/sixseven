@@ -13,6 +13,7 @@ class Carro : public Vehiculo{
  ~Carro();
  void setPasajeros(int);
  int getPasajeros() const;
+ void setPropietario(Propietario* propietario);
  string info() const override;
  int cobrar() const override;
 };

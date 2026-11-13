@@ -13,6 +13,7 @@ class Camion : public Vehiculo{
     ~Camion();
     void setEjes(int ejes);
     int getEjes() const;
+    void setPropietario(Propietario* propietario);
     string info() const override;
     int cobrar() const override;
 };

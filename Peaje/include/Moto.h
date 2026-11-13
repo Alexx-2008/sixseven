@@ -13,6 +13,7 @@ class Moto : public Vehiculo{
  ~Moto();
  void setCilindraje(int cilindraje);
  int getCilindraje() const;
+ void setPropietario(Propietario* propietario);
  string info() const override;
  int cobrar() const override;
 };

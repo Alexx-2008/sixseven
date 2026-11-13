@@ -1,5 +1,6 @@
 #include "Peaje.h"
 
+Peaje::Peaje(): cantidadCarros(0), cantidadMotos(0), cantidadBuses(0), cantidadCamiones(0), plataRecaudada(0), operador("","", "", ""), vehiculo(nullptr){}
 Peaje::Peaje(int cantidadCarros, int cantidadMotos, int cantidadBuses, int cantidadCamiones, int plataRecaudada, Operador operador, vector<Registro> registros, Vehiculo* vehiculo): cantidadCarros(cantidadCarros), cantidadMotos(cantidadMotos), cantidadBuses(cantidadBuses), cantidadCamiones(cantidadCamiones), plataRecaudada(plataRecaudada), operador(operador), registros(registros){}
 
 //sets
@@ -38,6 +39,7 @@ void Peaje::cobrarPeaje(Vehiculo* vehiculo){
     setPlataRecaudada(valor);
     Registro* registro = new Registro(vehiculo->getPlaca(), vehiculo->getTipo(), valor);
     hacerRegistro(registro);
+    cout<< vehiculo->info() << " Pago: "<<valor<<endl;
 }
 
 Peaje::~Peaje(){cout<<"Destruyendo peaje: ";}

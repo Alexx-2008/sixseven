@@ -13,6 +13,7 @@ class Bus: public Vehiculo{
     ~Bus();
     void setPuestos(int puestos);
     int getPuestos() const;
+    void setPropietario(Propietario* propietario);
     string info() const override;
     int cobrar() const override;
 };

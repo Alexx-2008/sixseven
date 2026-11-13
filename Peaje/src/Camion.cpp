@@ -4,30 +4,22 @@
 #include "Exception.h"
 
 Camion::Camion(string placa, int ejes) : Vehiculo(placa), ejes(ejes){
-    if (placa.length() <= 0 || placa.length() > 6) {
-        throw PlacaInvalidaException("La placa debe tener entre 1 y 6 caracteres");
+try{
+    if (ejes <= 2) {
+        throw DatosInvalidosException("El número de ejes debe ser mayor que dos");
     }
-    if (ejes <= 0) {
-        throw DatosInvalidosException("El número de ejes debe ser mayor que cero");
-    }
-} 
+   }catch (const exception& e){cout<<"Error: "<<e.what()<<endl;}
+}
+ 
 void Camion::setEjes(int ejes){this->ejes = ejes;}
 int Camion::getEjes()const{return ejes;}
+void Camion::setPropietario(Propietario* propietario){this->propietario = propietario;}
 Camion::~Camion() {cout << "Destruyendo camion: " << placa << endl;}
 int Camion::cobrar()const{
     int tarifaBase = 8000 + (100 * decena);
-do
-    if (propietario != nullptr){
-        if (propietario->getDescuento()) {
-        int descuento = 30 + centena;
-        return tarifaBase * (100 - descuento) / 100;
+        return tarifaBase * ejes;
      };
-    }
-    while (propietario==nullptr);
-return tarifaBase;}
-
-
 
 string Camion::info() const {
-    return Vehiculo::info() + " | Ejes: " + to_string(ejes) + getTipo();
+    return "Camion " + Vehiculo::info() + " Ejes: " + to_string(ejes);
 }
