@@ -18,7 +18,7 @@ string Camion::getTipo() const {
 }
 Camion::~Camion() {cout << "Destruyendo Camion: " << placa << endl;}
 int Camion::cobrar()const{
-    int tarifaBase = 8000 + (100 * decena);
+    int tarifaBase = 8000 + (100 * DECENA);
         return tarifaBase * ejes;
      };
 

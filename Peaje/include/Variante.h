@@ -2,6 +2,6 @@
 #include <iostream>
 #include <string>
 using namespace std;
-const int unidad = 8;
-const int decena = 9;
-const int centena = 4;
+const int UNIDAD = 8;
+const int DECENA = 9;
+const int CENTENA = 4;

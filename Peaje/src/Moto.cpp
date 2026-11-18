@@ -17,10 +17,10 @@ string Moto::getTipo() const {
 }
 Moto::~Moto() {cout << "Destruyendo Moto: " << placa << endl;}
 int Moto::cobrar()const{
-    int tarifaBase = 3000 + (100 * unidad);
+    int tarifaBase = 3000 + (100 * UNIDAD);
 if (propietario!=nullptr && propietario->getDescuento())
     {
-        int descuento=30+centena;
+        int descuento=30+CENTENA;
         tarifaBase=tarifaBase*(100-descuento)/100;   
 }
 return tarifaBase;}

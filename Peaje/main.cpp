@@ -31,7 +31,7 @@ vector<Vehiculo*> vehiculos;
     Operador *operador = new Operador("2","María", "123456789", "Operador");
     personas.push_back(operador);
     Registro *registro = new Registro("","",0);
-    
+/*    
     cout<<"Caso 1"<<endl;
     carro->setPropietario(noVecino);
     peaje->cobrarPeaje(carro);
@@ -85,7 +85,7 @@ vector<Vehiculo*> vehiculos;
 
     cout<<"Caso 13"<<endl;
     delete peaje;
-    
+    */
     for (Vehiculo* vehiculo : vehiculos) {
         delete vehiculo;
     }

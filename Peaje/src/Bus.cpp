@@ -16,7 +16,7 @@ string Bus::getTipo() const {
 }
 Bus::~Bus() {cout << "Destruyendo Bus: " << placa << endl;}
 int Bus::cobrar()const{
-    int tarifaBase = 14000 + (300 * decena);
+    int tarifaBase = 14000 + (300 * DECENA);
         return tarifaBase;} 
 
 string Bus::info() const{
